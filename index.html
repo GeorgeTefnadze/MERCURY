@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/Logo.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MERCURY</title>
+</head>
+<body>
+<header
+        class="fixed top-0 left-0 z-50 w-full border-b border-white/20 bg-white/10 backdrop-blur-2xl shadow-lg
+            animate-[headerDrop_800ms_cubic-bezier(0.2,0.8,0.2,1)_both]"
+>
+    <div
+            class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-16
+                animate-[fadeIn_700ms_ease-out_both]"
+            style="animation-delay: 120ms"
+    >
+        <div class="flex items-center gap-3">
+            <img
+                    src="/src/assets/Logo.svg"
+                    alt="logo"
+                    class="h-7 w-auto animate-[fadeIn_700ms_ease-out_both]"
+                    style="animation-delay: 200ms"
+            />
+        </div>
+        <nav
+                class="hidden md:block animate-[fadeIn_700ms_ease-out_both]"
+                style="animation-delay: 260ms"
+        >
+            <ul class="flex items-center gap-10 text-sm font-medium text-slate-800">
+                <li><a href="#" class="hover:text-slate-950">Product</a></li>
+                <li><a href="#" class="hover:text-slate-950">Solutions</a></li>
+                <li><a href="#" class="hover:text-slate-950">Community</a></li>
+                <li><a href="#" class="hover:text-slate-950">About</a></li>
+            </ul>
+        </nav>
+        <div
+                class="hidden md:block animate-[fadeIn_700ms_ease-out_both]"
+                style="animation-delay: 320ms"
+        >
+            <a
+                    href="#"
+                    class="rounded-full bg-indigo-600 px-6 py-3 text-sm font-medium text-white shadow-md shadow-indigo-600/20 hover:bg-indigo-500 transition"
+            >
+                Open Account
+            </a>
+        </div>
+        <button
+                id="menuBtn"
+                class="md:hidden inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/10 p-2
+                    text-slate-900 shadow-md shadow-black/5 backdrop-blur-xl hover:bg-white/20 transition
+                    animate-[fadeIn_700ms_ease-out_both]"
+                style="animation-delay: 260ms"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+        >
+            <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="hidden h-6 w-6" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-16 pb-4">
+            <div
+                    class="rounded-2xl border border-white/25 bg-white/10 backdrop-blur-2xl shadow-xl shadow-black/5 p-4
+                        animate-[menuDrop_400ms_ease-out_both]"
+            >
+                <ul class="grid gap-2 text-sm font-medium text-slate-800">
+                    <li><a href="#" class="block rounded-xl px-3 py-2 hover:bg-white/20 transition">Product</a></li>
+                    <li><a href="#" class="block rounded-xl px-3 py-2 hover:bg-white/20 transition">Solutions</a></li>
+                    <li><a href="#" class="block rounded-xl px-3 py-2 hover:bg-white/20 transition">Community</a></li>
+                    <li><a href="#" class="block rounded-xl px-3 py-2 hover:bg-white/20 transition">About</a></li>
+                </ul>
+                <a
+                        href="#"
+                        class="mt-4 block w-full text-center rounded-full bg-indigo-600 px-6 py-3 text-sm font-medium
+                            text-white shadow-md shadow-indigo-600/20 hover:bg-indigo-500 transition"
+                >
+                    Open Account
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="gradient w-full min-h-screen relative overflow-hidden px-6 flex flex-col justify-center items-center md:justify-start">
+    <div class="w-full h-full max-w-5xl pt-16 sm:pt-20 md:pt-24 text-center">
+        <h1
+                class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#272735] tracking-tight leading-tight animate-[fadeUp_900ms_cubic-bezier(0.2,0.8,0.2,1)_both]"
+                style="animation-delay: 0ms"
+        >
+            Banking for<br class="hidden sm:block"/>
+            ambitious companies
+        </h1>
+        <p
+                class="mt-5 text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto animate-[fadeUp_900ms_cubic-bezier(0.2,0.8,0.2,1)_both]"
+                style="animation-delay: 120ms"
+        >
+            Apply in 10 minutes for business banking that transforms how you operate.
+        </p>
+        <div
+                class="mt-8 flex flex-col md:flex-row items-stretch md:items-center justify-center gap-3 animate-[fadeUp_900ms_cubic-bezier(0.2,0.8,0.2,1)_both]"
+                style="animation-delay: 220ms"
+        >
+            <div class="flex w-full md:w-90 items-center rounded-full border border-white/30 bg-white/10 backdrop-blur-md px-4 py-3 shadow-md shadow-black/5">
+                <input
+                        type="email"
+                        placeholder="Enter your email"
+                        class="w-full bg-transparent text-sm text-slate-900 placeholder:text-slate-600 outline-none"
+                />
+            </div>
+            <button
+                    class="rounded-full bg-indigo-600 px-6 py-3 text-sm font-medium text-white shadow-md shadow-indigo-600/20 hover:bg-indigo-500 hover:shadow-lg hover:shadow-indigo-600/25 transition"
+            >
+                Open Account
+            </button>
+            <button
+                    class="rounded-full border border-white/30 bg-white/10 backdrop-blur-md px-6 py-3 text-sm font-medium text-slate-900 shadow-md shadow-black/5 hover:bg-white/20 transition"
+            >
+                Contact Sales
+            </button>
+        </div>
+    </div>
+    <div class="w-full mt-10  sm:mt-12 md:mt-14  justify-center absolute -bottom-30 hidden md:flex">
+        <img
+                src="/src/assets/main_example.png"
+                alt="main example"
+                class="w-full max-w-245 mx-8 rounded-2xl shadow-xl ring-1 ring-black/5 animate-[riseIn_1100ms_cubic-bezier(0.2,0.8,0.2,1)_both]"
+                style="animation-delay: 320ms"
+        />
+    </div>
+    <div class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute -top-24 left-1/2 h-130 w-130 -translate-x-1/2 rounded-full bg-indigo-300/20 blur-3xl"></div>
+        <div class="absolute -bottom-28 left-1/3 h-130 w-130 rounded-full bg-pink-300/20 blur-3xl"></div>
+    </div>
+</main>
+<section class="min-h-screen w-full bg-[#f7f6f3] flex flex-col items-center justify-center px-6">
+    <div class="text-center max-w-3xl sr-fade">
+        <h1 class="text-4xl md:text-5xl font-medium text-neutral-900 leading-tight">
+            Let banking power your<br/>
+            financial operations
+        </h1>
+    </div>
+    <div
+            class="mt-20 grid w-full max-w-6xl grid-cols-1 gap-y-14 gap-x-8 text-center sm:grid-cols-2 lg:grid-cols-3"
+    >
+        <div class="space-y-2 sr-item">
+            <div class="flex justify-center">
+                <img src="/src/assets/Img.svg" alt=""/>
+            </div>
+            <p class="font-medium text-neutral-900">Banking</p>
+            <p class="text-sm text-neutral-600">FDIC-insured accounts</p>
+        </div>
+        <div class="space-y-2 sr-item">
+            <div class="flex justify-center">
+                <img src="/src/assets/Img-1.svg" alt=""/>
+            </div>
+            <p class="font-medium text-neutral-900">Corporate credit cards</p>
+            <p class="text-sm text-neutral-600">Access credit faster</p>
+        </div>
+        <div class="space-y-2 sr-item">
+            <div class="flex justify-center">
+                <img src="/src/assets/Img-2.svg" alt=""/>
+            </div>
+            <p class="font-medium text-neutral-900">Mercury Treasury</p>
+            <p class="text-sm text-neutral-600">
+                Lower-risk, high-liquidity portfolios
+            </p>
+        </div>
+        <div class="space-y-2 sr-item">
+            <div class="flex justify-center">
+                <img src="/src/assets/Img-3.svg" alt=""/>
+            </div>
+            <p class="font-medium text-neutral-900">Payments</p>
+            <p class="text-sm text-neutral-600">Send and receive money easily</p>
+        </div>
+        <div class="space-y-2 sr-item">
+            <div class="flex justify-center">
+                <img src="/src/assets/Img-4.svg" alt=""/>
+            </div>
+            <p class="font-medium text-neutral-900">Startup-friendly capital</p>
+            <p class="text-sm text-neutral-600">Scale with Venture Debt or SAFEs</p>
+        </div>
+        <div class="space-y-2 sr-item">
+            <div class="flex justify-center">
+                <img src="/src/assets/Img-5.svg" alt=""/>
+            </div>
+            <p class="font-medium text-neutral-900">Automated workflows</p>
+            <p class="text-sm text-neutral-600">Save time, eliminate errors</p>
+        </div>
+    </div>
+</section>
+<section class="min-h-screen w-full bg-[#f7f6f3] flex flex-col items-center justify-center px-6">
+    <div class="w-full max-w-3xl text-center sr-fade">
+        <h2 class="text-4xl md:text-5xl font-medium text-neutral-900 leading-tight">
+            Pay $0/month.<br/>
+            Earn up to 5.38% yield<sup class="text-sm align-top">3</sup><br/>
+            with Mercury Treasury.
+        </h2>
+        <div class="mt-8 sr-fade">
+            <button
+                    id="openYieldModal"
+                    class="rounded-full border border-neutral-300 bg-white px-6 py-3 text-sm font-medium text-neutral-900 hover:bg-neutral-100 transition"
+            >
+                Yield Calculator
+            </button>
+        </div>
+    </div>
+    <div class="mt-20 w-full max-w-4xl divide-y divide-neutral-300">
+        <div class="flex items-center justify-between py-6 text-neutral-800 sr-row">
+            <span>Free checking and savings accounts</span>
+            <img src="/src/assets/checkmark.svg" alt="checkmark icon"/>
+        </div>
+        <div class="flex items-center justify-between py-6 text-neutral-800 sr-row">
+            <span>Zero monthly fees or overdraft fees</span>
+            <img src="/src/assets/checkmark.svg" alt="checkmark icon"/>
+        </div>
+        <div class="flex items-center justify-between py-6 text-neutral-800 sr-row">
+            <span>Free domestic and international (USD) wires</span>
+            <img src="/src/assets/checkmark.svg" alt="checkmark icon"/>
+        </div>
+        <div class="flex items-center justify-between py-6 text-neutral-800 sr-row">
+            <span>Free ACH transfers</span>
+            <img src="/src/assets/checkmark.svg" alt="checkmark icon"/>
+        </div>
+        <div class="flex items-center justify-between py-6 text-neutral-800 sr-row">
+            <span>Flat 1% currency exchange fee</span>
+            <img src="/src/assets/checkmark.svg" alt="checkmark icon"/>
+        </div>
+    </div>
+</section>
+<section class="gradient w-full h-[50vh] bg-[#f7f6f3] flex flex-col items-center justify-center px-6 text-center">
+    <div class="sr-fade">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-medium text-neutral-900 leading-tight">
+            Make your ambitions real
+        </h2>
+        <p class="mt-4 max-w-xl text-sm sm:text-base text-neutral-600">
+            Mercury enables over 100K startups of all sizes to operate<br class="hidden sm:block"/>
+            at their highest level.
+        </p>
+        <a
+                href="#"
+                class="mt-6 inline-flex items-center justify-center rounded-full bg-indigo-600 px-6 py-3 text-sm font-medium text-white shadow-md shadow-indigo-600/20 hover:bg-indigo-500 transition"
+        >
+            Open Account
+        </a>
+    </div>
+</section>
+<footer class="w-full bg-[#0f1020] px-6 py-10">
+    <div
+            class="mx-auto max-w-6xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-sm text-slate-300 sr-footer"
+    >
+        <div>
+            <p class="mb-3 font-medium text-white">Account</p>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-white">Open Account</a></li>
+                <li><a href="#" class="hover:text-white">Log In</a></li>
+                <li><a href="#" class="hover:text-white">iOS App</a></li>
+                <li><a href="#" class="hover:text-white">Android App</a></li>
+            </ul>
+        </div>
+        <div>
+            <p class="mb-3 font-medium text-white">Product</p>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-white">Demo</a></li>
+                <li><a href="#" class="hover:text-white">Pricing</a></li>
+                <li><a href="#" class="hover:text-white">Security</a></li>
+                <li><a href="#" class="hover:text-white">API Access</a></li>
+            </ul>
+        </div>
+        <div>
+            <p class="mb-3 font-medium text-white">Solutions</p>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-white">Checking</a></li>
+                <li><a href="#" class="hover:text-white">Credit Card</a></li>
+                <li><a href="#" class="hover:text-white">Treasury</a></li>
+                <li><a href="#" class="hover:text-white">SAFEs</a></li>
+            </ul>
+        </div>
+        <div>
+            <p class="mb-3 font-medium text-white">Company</p>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-white">About</a></li>
+                <li><a href="#" class="hover:text-white">Careers</a></li>
+                <li><a href="#" class="hover:text-white">Blog</a></li>
+                <li><a href="#" class="hover:text-white">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mt-10 text-center text-xs text-slate-500">
+        © 2026 Mercury Clone By George Tefnadze. All rights reserved.
+    </div>
+</footer>
+<button
+        id="toTopBtn"
+        type="button"
+        aria-label="Scroll to top"
+        class="fixed bottom-5 right-5 z-50 hidden cursor-pointer
+            h-11 w-11 items-center justify-center rounded-full
+            bg-black/15 backdrop-blur-xl
+            shadow-[0_8px_24px_rgba(0,0,0,0.18)]
+            ring-1 ring-black/20
+            text-white
+            transition-all duration-300 ease-out
+            hover:bg-black/25 hover:shadow-[0_10px_28px_rgba(0,0,0,0.24)]
+            active:scale-95
+            animate-[fadeUp_300ms_ease-out_both]"
+>
+    <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+    >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+    </svg>
+    <span
+            class="pointer-events-none absolute inset-0 rounded-full
+                bg-gradient-to-b from-white/30 to-transparent"
+    ></span>
+</button>
+<div id="yieldModal" class="fixed inset-0 z-999 hidden">
+    <div id="yieldBackdrop" class="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+    <div class="relative mx-auto mt-24 w-[92%] max-w-lg rounded-3xl bg-white/70 backdrop-blur-2xl shadow-2xl ring-1 ring-black/10">
+        <div class="flex items-center justify-between px-6 pt-6">
+            <h3 class="text-lg font-medium text-slate-900">Yield calculator</h3>
+            <button
+                    id="closeYieldModal"
+                    class="h-9 w-9 rounded-full bg-black/5 hover:bg-black/10 transition inline-flex items-center justify-center text-slate-900"
+                    aria-label="Close"
+            >
+                ✕
+            </button>
+        </div>
+        <form id="yieldForm" class="px-6 pb-6 pt-4 space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <label class="text-sm text-slate-700">
+                    Deposit amount
+                    <input
+                            id="amount"
+                            type="number"
+                            step="0.01"
+                            min="0"
+                            required
+                            class="mt-1 w-full rounded-2xl border border-black/10 bg-white/60 px-4 py-3 text-sm text-slate-900 outline-none focus:ring-2 focus:ring-indigo-500/30"
+                            placeholder="10000"
+                    />
+                </label>
+                <label class="text-sm text-slate-700">
+                    APY (%)
+                    <input
+                            id="apy"
+                            type="number"
+                            step="0.01"
+                            min="0"
+                            required
+                            class="mt-1 w-full rounded-2xl border border-black/10 bg-white/60 px-4 py-3 text-sm text-slate-900 outline-none focus:ring-2 focus:ring-indigo-500/30"
+                            placeholder="5.38"
+                    />
+                </label>
+                <label class="text-sm text-slate-700">
+                    Days
+                    <input
+                            id="days"
+                            type="number"
+                            step="1"
+                            min="1"
+                            required
+                            class="mt-1 w-full rounded-2xl border border-black/10 bg-white/60 px-4 py-3 text-sm text-slate-900 outline-none focus:ring-2 focus:ring-indigo-500/30"
+                            placeholder="30"
+                    />
+                </label>
+                <label class="text-sm text-slate-700">
+                    Base currency
+                    <select
+                            id="baseCurrency"
+                            class="mt-1 w-full rounded-2xl border border-black/10 bg-white/60 px-4 py-3 text-sm text-slate-900 outline-none focus:ring-2 focus:ring-indigo-500/30"
+                    >
+                        <option value="USD" selected>USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                    </select>
+                </label>
+            </div>
+            <label class="text-sm text-slate-700 block">
+                Convert results to (comma-separated codes)
+                <input
+                        id="toCurrencies"
+                        type="text"
+                        class="mt-1 w-full rounded-2xl border border-black/10 bg-white/60 px-4 py-3 text-sm text-slate-900 outline-none focus:ring-2 focus:ring-indigo-500/30"
+                        value="USD,EUR,GBP"
+                />
+            </label>
+            <div class="flex items-center gap-3 pt-2">
+                <button
+                        type="submit"
+                        class="rounded-full bg-indigo-600 px-6 py-3 text-sm font-medium text-white shadow-md shadow-indigo-600/20 hover:bg-indigo-500 transition"
+                >
+                    Calculate
+                </button>
+                <button
+                        type="button"
+                        id="resetYield"
+                        class="rounded-full bg-black/5 px-6 py-3 text-sm font-medium text-slate-900 hover:bg-black/10 transition"
+                >
+                    Reset
+                </button>
+                <div id="yieldStatus" class="ml-auto text-xs text-slate-600"></div>
+            </div>
+            <div id="yieldResults" class="hidden mt-4 rounded-2xl border border-black/10 bg-white/50 p-4">
+                <div class="text-sm font-medium text-slate-900">Results</div>
+                <div class="mt-3 space-y-2 text-sm text-slate-800" id="yieldList"></div>
+            </div>
+        </form>
+    </div>
+</div>
+<div
+        id="cookieBanner"
+        class="fixed bottom-4 left-1/2 z-50 hidden -translate-x-1/2
+            w-[92%] max-w-xl rounded-2xl
+            bg-black/20 backdrop-blur-xl
+            shadow-[0_12px_32px_rgba(0,0,0,0.18)]
+            ring-1 ring-black/20
+            px-5 py-4 text-sm text-white"
+>
+    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+        <p class="text-white/90">
+            We use cookies to improve your experience and analyze traffic.
+        </p>
+        <button
+                id="acceptCookies"
+                class="ml-auto rounded-full bg-white/90 px-4 py-2 text-sm font-medium
+                    text-slate-900 hover:bg-white transition"
+        >
+            Accept
+        </button>
+    </div>
+</div>
+<script type="module" src="/src/main.js"></script>
+<script type="module" src="/src/cookies.js"></script>
+</body>
+</html>
