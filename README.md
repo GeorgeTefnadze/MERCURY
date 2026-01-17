@@ -31,3 +31,7 @@ npm run dev
 ## Figma
 
 * https://www.figma.com/design/mhOEodG9det8X7rgtqJ33K/MERCURY?node-id=0-1&t=62jWbAVKwH5alVnr-1
+
+## Hosted URL
+
+* https://fabulous-fudge-f81bd1.netlify.app/
